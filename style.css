@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  min-height: 95vh;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e7e7e7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.title {
+  background-color: #4070f4;
+  height: 100px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.title h1 {
+  margin-bottom: 5px;
+}
+.hero {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.hero .titles {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+}
+.what-should-included {
+  margin-bottom: 15px;
+}
+
+.hero .bodies {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+#word {
+  width: 300px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #4070f4;
+  border-radius: 5px;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  padding: 5px 8px;
+}
+.hero label {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  gap: 8px;
+  font-size: 20px;
+}
+#word:focus {
+  background: transparent;
+  border: 0.3px solid #4070f4;
+  font-size: 20px;
+}
+.hero button {
+  background: #4070f4;
+  border: none;
+  width: 80%;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero button:hover {
+  color: #4070f4;
+  background-color: #fff;
+  border: 0.5px solid #4070f4;
+  cursor: pointer;
+}
+
+#result {
+  width: 100%;
+  min-height: 120px;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.password-option {
+  display: flex;
+  min-width: 150px;
+  height: 100%;
+  flex: 1;
+  background-color: #6ed674;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.password-text {
+  font-family: monospace;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fa-copy {
+  cursor: pointer;
+  color: #4070f4;
+  transition: color 0.3s;
+}
+.fa-copy:hover {
+  color: #3050c0;
+}
+#showError {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 8px 15px;
+  border-left: 8px solid #12cc4a;
+  background: rgb(169, 243, 191);
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 20px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 5px 10px;
+  height: 60px;
+}
+.footer p {
+  font-size: 12px;
+}
+
+img {
+  width: 75%;
+  height: 90%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .container {
+    height: 97vh;
+    gap: 15px;
+  }
+  .hero .titles,
+  .hero form {
+    width: 100%;
+  }
+  .hero .titles {
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+    height: 98vh;
+    margin: 2px auto;
+  }
+  .title {
+    padding: 10px;
+  }
+  .title h1 {
+    font-size: 1.5rem;
+  }
+  .hero form {
+    padding: 15px;
+  }
+  #result {
+    flex-direction: column;
+  }
+  .password-option {
+    width: 100%;
+  }
+  img {
+    height: 100px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .container {
+    width: 95%;
+    height: 96.5vh;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .hero label {
+    font-size: 12px;
+  }
+}
